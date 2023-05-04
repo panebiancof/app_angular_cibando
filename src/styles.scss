@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~primeicons/primeicons.css";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+  padding: 10px!important;
+}
+.bg-dark{
+  background-color: #8e210b!important;
+}
+
+.contenitore {
+  padding: 16px;
+}
+
+.logo{
+  width: 60px;
+  margin-right: 8px;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
