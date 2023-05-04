@@ -23,30 +23,17 @@
   </div>
 </nav>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-
-    <div class="carousel-item active" *ngFor="let image of images">
-      <img class="d-block w-100"
-      [src]="basePathImages+image.id+'.jpg'" [alt]="image.label">
-      <h2>{{image.label}}</h2>
-    </div>
-
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+<ngb-carousel *ngIf="images">
+	<ng-template ngbSlide *ngFor="let image of images">
+		<div class="picsum-img-wrapper">
+			<img [src]="basePathImages+image.id+'.jpg'" alt="Random first slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>{{image.label}}</h3>
+			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+		</div>
+	</ng-template>
+</ngb-carousel>
 
 <div class="contenitore">
   <h2>Applicazione di Esempio</h2>
