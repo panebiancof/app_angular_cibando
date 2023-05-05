@@ -23,7 +23,7 @@
   </div>
 </nav>
 
-<ngb-carousel *ngIf="images">
+<ngb-carousel *ngIf="images?.length">
 	<ng-template ngbSlide *ngFor="let image of images">
 		<div class="picsum-img-wrapper">
 			<img [src]="basePathImages+image.id+'.jpg'" alt="Random first slide" />
