@@ -1,13 +1,16 @@
 .contenitore {
-  background-color: green;
-
   h2{
-    color: white;
+    color: black;
     font-size: 50px;
   }
 
   p {
     font-weight: bold;
-    color: red;
+    color: black;
+  }
+
+  .testoEvidenziato{
+    background-color: yellow;
+    width: 400px;
   }
 }

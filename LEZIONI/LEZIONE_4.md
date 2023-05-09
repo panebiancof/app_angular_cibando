@@ -65,9 +65,19 @@ Fino ad ora abbiamo immesso i dati dentro l'HTML. Ora facciamo il contrario, qui
 
   <img [src]="urlFoto" [alt]="label" (click)=scriviLog() >
 
-## *ngFor e *ngIf
+## Direttive strutturali *ngFor e *ngIf
     <div class="carousel-item active" *ngFor="let image of images">
       <img class="d-block w-100"
       [src]="basePathImages+image.id+'.jpg'" [alt]="image.label">
       <h2>{{image.label}}</h2>
     </div>
+
+## Direttiva *ngSwitchCase 
+Tutto quello che posso fare conl o switch lo posso fare con la direttiva if, quindi è poco usata.
+ <iv id_contenitore-switch [ngSwitch]="colore">
+  <div *ngSwitchCase="'green'">Questo div comparirà solo se il colore scelto sarà verde</div>
+  <div *ngSwitchCase="'red'">Questo div comparirà solo se il colore scelto sarà rosso</div>
+  <div *ngSwitchCase="'white'">Questo div comparirà solo se il colore scelto sarà bianco</div>
+  <div *ngSwitchDefault>Questo div comparirà solo se non sarà stao scelto il colore</div>
+ </div>
+

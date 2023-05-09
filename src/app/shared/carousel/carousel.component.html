@@ -1,0 +1,17 @@
+<ngb-carousel *ngIf="images?.length >1; else noCarousel">
+	<ng-template ngbSlide *ngFor="let image of images"; let i = index>
+		<div class="picsum-img-wrapper">
+			<img [src]="basePathImages+image.id+'.jpg'" alt="image.label" />
+		</div>
+		<div class="carousel-caption">
+			<h3>{{image.label}}</h3>
+			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+		</div>
+	</ng-template>
+</ngb-carousel>
+
+<ng-template #noCarousel>
+  <div>
+    <img [src]="basePathImages+images[0].id+'.jpg'" alt="image[0].label"/>
+  </div>
+</ng-template>
