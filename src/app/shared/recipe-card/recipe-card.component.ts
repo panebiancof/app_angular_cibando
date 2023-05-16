@@ -7,5 +7,5 @@ import { Recipe } from 'src/app/models/recipe.model';
   styleUrls: ['./recipe-card.component.scss']
 })
 export class RecipeCardComponent {
-  @Input() recipe: Recipe[];
+  @Input() recipes: Recipe[];
 }
