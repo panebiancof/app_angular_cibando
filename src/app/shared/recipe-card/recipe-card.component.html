@@ -8,7 +8,16 @@
       <h5 class="card-title">{{recipe.title}}</h5>
       <p class="card-text">{{recipe.description|slice:0:160}}</p>
       <div class="text-center">
-        <a href="#" class="btn btn-primary">Visualizza</a>
+        <!-- "/dettaglio/12" è PATH ASSOLUTO, significa che parte dalla root del domain ed aggancia questo. ES: www.cibando.it/dettaglio/12-->
+        <!-- "dettaglio/12" è PATH RELATIVO, significa che parte da dove ci troviamo. ES: www.cibando.it/PATH_DA_DOVE_CLICCO/dettaglio/12-->
+        <!-- LINK ASSOLUTO-->
+        <!--
+        <a class="btn btn-primary" routerLink="ricette/dettaglio/{{recipe.title}}/{{recipe._id}}">Visualizza</a>
+        -->
+
+        <!-- LINK RELATIVO-->
+        <a class="btn btn-primary" routerLink="dettaglio/{{recipe.title}}/{{recipe._id}}">Visualizza</a>
+
       </div>
     </div>
   </div>
