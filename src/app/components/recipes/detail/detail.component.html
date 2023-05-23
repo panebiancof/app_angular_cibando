@@ -1,3 +1,13 @@
-<img src="{{ricetta.image}}">
-<h2>{{ricetta.title}}</h2>
-<p>{{ricetta.description}}</p>
+<div class="detail-image" [ngStyle]="{'background-image':'url('+ricetta.image+')'}"></div>
+
+<div class="detail-content">
+  <h3>{{ricetta.title}}</h3>
+
+  <div class="detail-toolbar">
+    <p class="pi pi-book">Difficolt&agrave;: {{ricetta.difficulty}}</p>
+    <p class="pi pi-calendar">Pubblicato il: {{ricetta.date}}</p>
+    <p>{{ricetta.description}}</p>
+  </div>
+</div>
+
+
