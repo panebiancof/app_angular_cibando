@@ -27,7 +27,8 @@ export class RecipesListComponent implements OnInit {
   }
 
   riceviMessaggio(event: any){
-    this.titoloRicevuto = event;
+    this.titoloRicevuto == event ? this.titoloRicevuto = '' : this.titoloRicevuto = event;
+
   }
 
 }
