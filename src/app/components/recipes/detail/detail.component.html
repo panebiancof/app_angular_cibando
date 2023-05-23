@@ -1,13 +1,19 @@
-<div class="detail-image" [ngStyle]="{'background-image':'url('+ricetta.image+')'}"></div>
+<div *ngIf="ricetta">
+  <div class="detail-image" [ngStyle]="{'background-image':'url('+ricetta.image+')'}"></div>
 
-<div class="detail-content">
-  <h3>{{ricetta.title}}</h3>
+  <div class="detail-content">
+    <h3>{{ricetta.title}}</h3>
 
-  <div class="detail-toolbar">
-    <p class="pi pi-book">Difficolt&agrave;: {{ricetta.difficulty}}</p>
-    <p class="pi pi-calendar">Pubblicato il: {{ricetta.date}}</p>
-    <p>{{ricetta.description}}</p>
+    <div class="detail-toolbar">
+      <p class="pi pi-book difficulty">Difficolt&agrave;: <img [src]="basePathDifficolta+ricetta.difficulty+'.png'"></p>
+      <p class="pi pi-calendar">Pubblicato il: {{ricetta.date}}</p>
+      <p>{{ricetta.description}}</p>
+    </div>
   </div>
+</div>
+
+<div *ngIf="!ricetta">
+  La ricetta ricercata non esiste.
 </div>
 
 

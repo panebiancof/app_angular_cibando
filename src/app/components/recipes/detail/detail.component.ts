@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DetailComponent implements OnInit{
   ricetta: Recipe;
+  basePathDifficolta = '../../../../assets/images/difficolta-'
 
   constructor(
     private recipeService: RecipeService,
@@ -32,7 +33,8 @@ export class DetailComponent implements OnInit{
    * */
   onGetRecipe(): void{
     /**
-     * prendi un parametro _id dal snapshot della rotta attiva e lo metti nella costante id
+     * prendi un parametro _id dalla URL che scrivo dal browser
+     * dal snapshot della rotta attiva e lo metti nella costante id
     */
     const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
 
