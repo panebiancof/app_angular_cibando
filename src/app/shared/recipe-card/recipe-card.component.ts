@@ -11,8 +11,8 @@ export class RecipeCardComponent {
   // questa variabile può uscire fuori dal componente
   @Output() messaggio = new EventEmitter();
 
-  inviaTitolo(titolo: string){
+  inviaTitolo(recipe: Recipe){
     // fai uscire il titolo esternamente
-    this.messaggio.emit(titolo);
+    this.messaggio.emit(recipe);
   }
 }

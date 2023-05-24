@@ -1,7 +1,7 @@
-<div id="container">
+<div id="container-title">
   <h2>Le nostre Ricette:</h2>
-  <div *ngIf="titoloRicevuto">
-    {{titoloRicevuto}}
+  <div *ngIf="ricettaRicevuta">
+    {{ricettaRicevuta.title}} - Difficoltà: {{ricettaRicevuta.difficulty}}
   </div>
 </div>
 <app-recipe-card [recipes]="ricette" (messaggio)="riceviMessaggio($event)"></app-recipe-card>
