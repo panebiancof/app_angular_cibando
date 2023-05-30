@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { DetailComponent } from './components/recipes/detail/detail.component';
+import { RegistrationComponent } from './components/user/registration/registration.component';
 
 /**
  * { path: 'PATH_URL', component: NomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'dettaglio/:title/:_id', component: DetailComponent},
   ]},
 
+  { path: 'registrazione', component: RegistrationComponent},
   { path: '**', redirectTo: 'home'}
 ];
 

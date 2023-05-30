@@ -6,7 +6,7 @@
     <div class="card-image" [ngStyle]="{'background-image':'url('+recipe.image+')'}" (mouseover)="inviaTitolo(recipe)" (mouseout)="inviaTitolo(null)"></div>
     <div class="card-body">
       <h5 class="card-title">{{recipe.title}}</h5>
-      <p class="card-text">{{recipe.description|slice:0:160}}...</p>
+      <p class="card-text">{{recipe.description|slice:0:truncate_string_with_space(recipe.description)}} ...</p>
       <div class="text-center">
         <!-- "/dettaglio/12" è PATH ASSOLUTO, significa che parte dalla root del domain ed aggancia questo. ES: www.cibando.it/dettaglio/12-->
         <!-- "dettaglio/12" è PATH RELATIVO, significa che parte da dove ci troviamo. ES: www.cibando.it/PATH_DA_DOVE_CLICCO/dettaglio/12-->

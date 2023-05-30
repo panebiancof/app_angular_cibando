@@ -15,4 +15,15 @@ export class RecipeCardComponent {
     // fai uscire il titolo esternamente
     this.messaggio.emit(recipe);
   }
+
+  truncate_string_with_space(stringa):number{
+    const max_length = 160;
+    if(stringa.length <= max_length){
+      return max_length;
+    }
+    else{
+      let last_space_position = stringa.indexOf(' ',max_length);
+      return last_space_position;
+    }
+  }
 }
